@@ -23,7 +23,7 @@ if(mysqli_connect_errno() == 0) {
             <h2>Flaver Chat&nbsp;
                 <form action="logout.php" method="post">
                     <input type="submit" value="Logout">
-                    <input type="hidden" value="<?php $row->insert_id; ?>" name="userId">
+                    <input type="hidden" value="<?php echo $row->insert_id; ?>" name="userId">
                     <input type="hidden" value="<?php echo $username ?>" name="username">
                 </form>
             </h2>
@@ -80,6 +80,7 @@ if(mysqli_connect_errno() == 0) {
             <!--Include color script and chat script-->
             <script type="text/javascript" src="js/color.js"></script>
             <script type="text/javascript" src="js/chatcontroller.js"></script>
+            <script type="text/javascript" src="js/userlist.js"></script>
         <?php
     }
 
