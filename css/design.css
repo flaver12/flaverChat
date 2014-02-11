@@ -1,0 +1,98 @@
+#stream {
+float:left;
+width:548px;
+height:400px;
+overflow:auto;
+border:1px solid black;
+}
+#useronline {
+float:left;
+width:150px;
+height:400px;
+border:1px solid black;
+margin-left:2px;
+}
+#useronline h1 {
+width:150px;
+height:22px;
+background:black;
+color:white;
+font-size:16px;
+text-align:center;
+margin:0px;
+}
+#userstream {
+width:150px;
+height:378px;
+overflow:auto;
+}
+#userstream ul li {
+list-style:none;
+padding:1px 0px 1px 0px;
+}
+#chatfenster {
+clear:both;
+}
+#stream div {
+margin:3px 5px 3px 5px;
+}
+#message {
+width:640px;
+height:60px;
+border:1px solid black;
+}
+#submit {
+width:60px;
+height:65px;
+border:1px solid black;
+background:black;
+color:white;
+font-weight:bold;
+}
+table tr td {
+vertical-align:top;
+}
+h4 {
+margin:15px 0px 0px 0px;
+font-size:12pt;
+}
+#color {
+width:700px;
+height:20px;
+margin:5px 0px 3px 0px;
+}
+.colorset {
+float:left;
+width:15px;
+height:15px;
+margin:0px 3px 0px 3px;
+cursor:pointer;
+}
+.red {
+background:red;
+}
+.blue {
+background:blue;
+}
+.lightblue {
+background:#21CEC8;
+}
+.darkred {
+background:#891719;
+}
+.black {
+background:black;
+}
+.green {
+background:green;
+}
+.purple {
+background:purple;
+}
+.orange {
+background:orange;
+}
+.cactive {
+width:20px;
+height:20px;
+}
