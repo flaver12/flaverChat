@@ -7,14 +7,11 @@
  */
 $id = $_POST['id'];
 $idT = $_POST['id2'];
-print_r($_POST);
 include "db.php";
 if(mysqli_connect_errno() == 0) {
     $q = "SELECT *
     FROM chat_message
     WHERE id > $id AND id <= $idT ORDER BY id";
-    var_dump($q);
-    var_dump($id);
     $result = $db->query($q);
     while($msg = $result->fetch_object()) {
     ?>

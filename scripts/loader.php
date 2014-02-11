@@ -24,7 +24,7 @@ if(mysqli_connect_errno() == 0) {
                 <form action="logout.php" method="post">
                     <input type="submit" value="Logout">
                     <input type="hidden" value="<?php $row->insert_id; ?>" name="userId">
-                    <input type="hidden" value="<?php $username ?>" name="username">
+                    <input type="hidden" value="<?php echo $username ?>" name="username">
                 </form>
             </h2>
             <div id="stream"></div>
@@ -47,7 +47,7 @@ if(mysqli_connect_errno() == 0) {
                 <table>
                     <tr>
                         <td>
-                            <textarea maxlength="500" id="message"></textarea>
+                            <textarea maxlength="500" id="messageBox"></textarea>
                             <div id="areacount">500</div>
                         </td>
                         <td>
@@ -79,7 +79,7 @@ if(mysqli_connect_errno() == 0) {
             </form>
             <!--Include color script and chat script-->
             <script type="text/javascript" src="js/color.js"></script>
-            <script type="text/javascript" src="js/chat.js"></script>
+            <script type="text/javascript" src="js/chatcontroller.js"></script>
         <?php
     }
 
