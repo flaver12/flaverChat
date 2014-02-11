@@ -6,12 +6,15 @@
  * Time: 02:47
  */
 $id = $_POST['id'];
-$id2 = $_POST['id2'];
+$idT = $_POST['id2'];
+print_r($_POST);
 include "db.php";
 if(mysqli_connect_errno() == 0) {
     $q = "SELECT *
     FROM chat_message
-    WHERE id >".$id."AND id <= ". $id2 ."    ORDER BY id";
+    WHERE id > $id AND id <= $idT ORDER BY id";
+    var_dump($q);
+    var_dump($id);
     $result = $db->query($q);
     while($msg = $result->fetch_object()) {
     ?>

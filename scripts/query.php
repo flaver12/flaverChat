@@ -11,8 +11,10 @@ if(mysqli_connect_errno() == 0) {
     $result = $db->prepare($q);
     $result->execute();
     $result->bind_result($id2);
-    $id2 = $result->fetch();
-    echo $id2;
+
+    while($result->fetch()) {
+        echo $id2;
+    }
 } else {
     echo "Database Error:" .mysqli_connect_errno()." : ".mysqli_connect_error();
 }

@@ -30,7 +30,7 @@ function loadChat() {
     $.ajax({
         type: "POST",
         url: "scripts/loadchat.php",
-        data: "id="+last + "id2="+newId,
+        data: {id:last, id2:newId},
         success: function(msg) {
             zeichen = new Array(/auml/g, /Auml/g, /ouml/g, /Ouml/g, /uuml/g, /Uuml/g, /szlig/g);
             replace = new Array("&auml;", "&Auml;", "&ouml;", "&Ouml;", "&uuml;", "&Uuml;", "&szlig;");
