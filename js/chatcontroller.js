@@ -4,10 +4,24 @@
 //Grep the values and set some variabels
 var last = $("#lastEntry").val();
 var newId;
+var userList = 60;
 var noReload = 0;
 //Controlling function
 function controlling() {
    if(noReload == 0) {
+       if(userList == 60) {
+           userList = 0;
+           //Ajax request
+           $.ajax({
+               type: "POST",
+               data: {id:$("#userid").val()},
+               url: "scripts/userlist.php",
+               success: function(msg) {
+                   $("#userstream").html(msg);
+               }
+           });
+       }
+       userList ++;
        //Ajax request
        $.ajax({
            type: "POST",

@@ -47,7 +47,7 @@ if(mysqli_connect_errno() == 0) {
                 <table>
                     <tr>
                         <td>
-                            <textarea maxlength="500" id="messageBox"></textarea>
+                            <textarea maxlength="500" id="messageBox" style="width: 540px;"></textarea>
                             <div id="areacount">500</div>
                         </td>
                         <td>
@@ -80,7 +80,6 @@ if(mysqli_connect_errno() == 0) {
             <!--Include color script and chat script-->
             <script type="text/javascript" src="js/color.js"></script>
             <script type="text/javascript" src="js/chatcontroller.js"></script>
-            <script type="text/javascript" src="js/userlist.js"></script>
         <?php
     }
 

@@ -12,12 +12,13 @@ if(!$userId == "") {
         $timestp = time();
         $time = date("d.m.Y H:i",$timestp);
         $timeCalac = date("d.m.Y H:i",strtotime("$time - 10 minutes"));
-        $q = "UPDATE chat_user SET time = $time WHERE id = $userId";
+        $q = "UPDATE chat_user SET time = '$time' WHERE id = $userId";
         $row = $db->query($q);
-        $q = "SELECT id, time, FROM chat_user";
-        $resultT = $db->prepare($q);
-        $resultT->execute();
-        $resultT->bind_result($id, $date);
+
+        $sql = 'SELECT id, time FROM chat_user';
+        $result = $db->prepare($sql);
+        $result->execute();
+        $result->bind_result($id, $date);
 
         $userlist = array();
         $userlistCount = 0;
@@ -29,8 +30,8 @@ if(!$userId == "") {
             }
         }
 
-        for($i = 0; $i > $userlistCount; $i++) {
-            $q = "DELTE FROM chat_user WHERE id = $userlist[$i]";
+        for($i = 0; $i < count($userlist); $i++) {
+            $q = "DELETE FROM chat_user WHERE id = $userlist[$i]";
             $result = $db->query($q);
         }
 
